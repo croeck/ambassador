@@ -410,11 +410,11 @@ service: {self.target.path.k8s}
         found = 0
 
         wanted = {
-            "TLSContext server found no certificate in secret test-certs-secret-invalid in namespace default",
+            "TLSContext server found no certificate in secret test-certs-secret-invalid in namespace default, ignoring...",
             "TLSContext bad-path-info found no cert_chain_file '/nonesuch'",
             "TLSContext bad-path-info found no private_key_file '/nonesuch'",
             "TLSContext validation-without-termination found no certificate in secret test-certs-secret-invalid in namespace default",
-            "TLSContext missing-secret-key: 'cert_chain_file' requires 'private_key_file' as well"
+            "TLSContext missing-secret-key: 'cert_chain_file' requires 'private_key_file' as well",
         }
 
         for errsvc, errtext in errors:
